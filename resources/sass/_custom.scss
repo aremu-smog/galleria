@@ -1,0 +1,159 @@
+$purple: #940EF9;
+$light-grey: #F2F2F2;
+.container{
+    width: 80%;
+    margin: auto;
+}
+.container-fluid{
+    width: 90%;
+    margin: auto;
+}
+.row{
+    display: flex;
+}
+.row-center-y{
+    align-items: center ;
+    flex-wrap: wrap;
+}
+.row-center-x{
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.row-center-xy{
+    align-items: center;
+    justify-content: center;
+}
+.row-spread-items{
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+@for $i from 1 to 12{
+    .col-#{$i} {
+        width: (($i/12) *100%);
+    }
+}
+/*Flex items*/
+.flex-start{
+    justify-content: flex-start;
+}
+.flex-end{
+    justify-content: flex-end;
+}
+
+
+
+
+
+/* Buttons style */
+
+.btn{
+    border-width: 1px;
+    border-style: solid;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.8em 2.5em;
+    color: white;
+    cursor: pointer;
+    // @extend .text-light;
+}
+.btn-purple{
+    background: $purple;
+    border-color: $purple;
+    &:hover{
+        opacity: 0.7;
+    }
+}
+
+
+
+/* Text styles */
+
+//colors
+.text-white{
+    color: white !important;
+}
+
+.text-purple{
+    color: $purple !important;
+}
+
+
+//alignment
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: center;
+}
+
+//weights
+
+.text-generis{
+    font-family: 'Generis', sans-serif !important;
+}
+.text-karla{
+    font-family: 'Karla', sans-serif !important;
+    font-family: swap;
+}
+
+
+/*sizes*/
+.text-lg{
+    font-size: 2.5em;
+}
+
+/* Backgrounds */
+
+.bg-purple{
+    background-color: $purple;
+}
+.bg-light-grey{
+    background-color: $light-grey;
+}
+
+/*Form*/
+label{
+    display: block;
+    font-size: 12px;
+    margin-top: 1.5em;
+    margin-bottom: 5px;
+}
+
+.form-group{
+    margin-bottom: 1.5em;
+}
+input,textarea{
+    width: 100%;
+    outline: none;
+    color: black;
+    border:none;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    font-size: 16px;
+    font-family: 'Karla';
+    &:focus{
+        border-bottom-color: $purple;
+        color: $purple;
+    }
+}
+
+
+/* Flex wraps */
+.flex-column{
+    flex-direction: column !important;
+}
+
+.flex-row{
+    flex-direction: row !important;
+}
+
+/* Icons */
+.icon{
+    height:13px;
+    width: auto !important;
+}

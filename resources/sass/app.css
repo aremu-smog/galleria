@@ -1,0 +1,492 @@
+@font-face {
+  src: url("/font/Karla-Regular.ttf");
+  font-family: 'Karla';
+}
+
+@font-face {
+  src: url("/font/sui generis rg.ttf");
+  font-family: 'Generis';
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.container-fluid {
+  width: 90%;
+  margin: auto;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.row-center-y {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.row-center-x {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.row-center-xy {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.row-spread-items {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.col-1 {
+  width: 8.33333%;
+}
+
+.col-2 {
+  width: 16.66667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33333%;
+}
+
+.col-5 {
+  width: 41.66667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33333%;
+}
+
+.col-8 {
+  width: 66.66667%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33333%;
+}
+
+.col-11 {
+  width: 91.66667%;
+}
+
+/*Flex items*/
+.flex-start {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.flex-end {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+/* Buttons style */
+.btn {
+  border-width: 1px;
+  border-style: solid;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.8em 2.5em;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-purple {
+  background: #940EF9;
+  border-color: #940EF9;
+}
+
+.btn-purple:hover {
+  opacity: 0.7;
+}
+
+/* Text styles */
+.text-white {
+  color: white !important;
+}
+
+.text-purple {
+  color: #940EF9 !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: center;
+}
+
+.text-generis {
+  font-family: 'Generis', sans-serif !important;
+}
+
+.text-karla {
+  font-family: 'Karla', sans-serif !important;
+  font-family: swap;
+}
+
+/*sizes*/
+.text-lg {
+  font-size: 2.5em;
+}
+
+/* Backgrounds */
+.bg-purple {
+  background-color: #940EF9;
+}
+
+.bg-light-grey {
+  background-color: #F2F2F2;
+}
+
+/*Form*/
+label {
+  display: block;
+  font-size: 12px;
+  margin-top: 1.5em;
+  margin-bottom: 5px;
+}
+
+.form-group {
+  margin-bottom: 1.5em;
+}
+
+input, textarea {
+  width: 100%;
+  outline: none;
+  color: black;
+  border: none;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: black;
+  font-size: 16px;
+  font-family: 'Karla';
+}
+
+input:focus, textarea:focus {
+  border-bottom-color: #940EF9;
+  color: #940EF9;
+}
+
+/* Flex wraps */
+.flex-column {
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important;
+}
+
+.flex-row {
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: row !important;
+          flex-direction: row !important;
+}
+
+/* Icons */
+.icon {
+  height: 13px;
+  width: auto !important;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Karla', sans-serif;
+  font-size: 14px;
+  font-display: swap;
+  background: #F2F2F2;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-navigation {
+  background: #940EF9;
+  padding: 0em 2em 4em;
+  position: fixed;
+  top: 75px;
+  right: 0px;
+  width: 150px;
+  font-size: 16px;
+  text-align: right;
+  line-height: 30px;
+  border-radius: 5px;
+  display: none;
+}
+
+.main-navigation a:hover {
+  opacity: 0.7;
+}
+
+.recent-listings {
+  background: #F2F2F2;
+  padding: 4em 0;
+}
+
+.recent-listings h1 {
+  font-size: 2.5em;
+  margin-bottom: 1em;
+}
+
+.recent-listings .listings {
+  display: -ms-grid;
+  display: grid;
+  gap: 1em;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-rows: (1fr)[1];
+      grid-template-rows: repeat(1, 1fr);
+  grid-auto-flow: row;
+}
+
+.recent-listings .listings .item {
+  background: white;
+  padding-bottom: 3em;
+  border-radius: 5px;
+}
+
+.recent-listings .listings .item h3 {
+  font-size: 1.6em;
+}
+
+.recent-listings .listings .item img {
+  border-radius: 5px 5px 0px 0px;
+  width: 100%;
+}
+
+.recent-listings .listings .item p {
+  margin-bottom: 2em;
+}
+
+.recent-listings .listings .item .btn {
+  font-size: 10px;
+  padding: 1em 2em;
+}
+
+.recent-listings .listings .item form {
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
+.form-container {
+  height: 500px;
+  margin: auto;
+  margin-top: 50px;
+  background: white;
+  margin-bottom: 50px;
+  width: 850px;
+}
+
+.form-container .col-6 {
+  padding: 3em;
+}
+
+.form-container .col-6 p {
+  font-size: 2em;
+  margin-top: 1em;
+}
+
+.create_gallery {
+  background-image: url("/img/albums.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.main-footer {
+  background: black;
+  color: white;
+  height: 200px;
+  background-image: url("/img/galleria logo outline.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main-header {
+  height: 80px;
+  padding: 0 2em;
+  background: #940EF9;
+}
+
+.main-header h1 {
+  margin-top: -0.4em;
+}
+
+.logo {
+  height: 30px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .recent-listings .listings {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .recent-listings .listings {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .row-mobile-reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .row-mobile-wrap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .col-mobile-full {
+    width: 100% !important;
+  }
+  .col-mobile-half {
+    width: 50% !important;
+  }
+  /* Texts */
+  .heading-mobile {
+    font-size: 1.7em !important;
+  }
+  /*Buttons */
+  .btn {
+    border-radius: 2px;
+    font-size: 11px;
+    padding: 0.4em 1.5em;
+  }
+  .btn-hide-on-mobile {
+    display: none;
+  }
+  .btn-mobile-lg {
+    border-radius: 3px;
+    padding: 0.7em 2em;
+  }
+  .intro {
+    padding-bottom: 2em;
+  }
+  .intro p {
+    font-size: 2em;
+  }
+  .intro img {
+    margin: auto;
+  }
+  /* Main Navigation */
+  .main-navigation img {
+    width: 100px;
+  }
+  .main-navigation .menu-icon {
+    display: block;
+    width: 25px;
+  }
+  .main-navigation .menu-items {
+    display: none;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-top: 1em;
+  }
+  .main-navigation .menu-items a {
+    margin: 1em 0;
+  }
+  .recent-listings .container {
+    width: 90%;
+  }
+  .recent-listings .listings {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .recent-listings .listings .item {
+    padding-bottom: 1em;
+  }
+  .recent-listings .listings .item .container {
+    width: 85%;
+  }
+  .recent-listings .listings .item h3 {
+    font-size: 1em;
+  }
+  .recent-listings .listings .item p {
+    display: none;
+  }
+  .recent-listings .listings .item .btn {
+    font-size: 8px;
+    padding: 0.5em 1em;
+  }
+  .hero .col-4, .hero .col-6 {
+    padding: 2em 0;
+  }
+  .hero img {
+    width: 60%;
+    margin: auto;
+  }
+  .form-wrapper img {
+    display: none;
+  }
+  .form-wrapper .form-container {
+    margin-top: -100px;
+  }
+  .main-footer img {
+    width: 150px;
+  }
+  .main-footer .col-3 {
+    width: 70%;
+  }
+  /*Welcome Illustration*/
+  .welcome .col-4 {
+    padding-bottom: 3em;
+  }
+  .welcome .welcome-illustration {
+    width: 60%;
+  }
+  .list-view img {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=app.css.map */

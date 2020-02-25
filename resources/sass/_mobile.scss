@@ -1,0 +1,145 @@
+@media only screen and (max-width:1200px){
+ .recent-listings{
+     .listings{
+         grid-template-columns: repeat(4,1fr);
+     }
+ }   
+}
+@media only screen and (max-width: 900px){
+    .recent-listings{
+        .listings{
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+}
+@media only screen and (max-width: 600px){
+  
+    .row-mobile-reverse{
+        flex-direction: column-reverse;
+    }
+    .row-mobile-wrap{
+        flex-wrap: wrap;
+    }
+    .col-mobile-full{
+        width: 100% !important;
+    }
+    .col-mobile-half{
+        width: 50% !important;
+    }
+
+    /* Texts */
+    .heading-mobile{
+        font-size : 1.7em !important;
+    }
+
+    /*Buttons */
+    .btn{
+    border-radius: 2px;
+    font-size: 11px;
+    padding: 0.4em 1.5em;
+    }
+    .btn-hide-on-mobile{
+        display: none;
+    }
+
+    .btn-mobile-lg{
+        border-radius: 3px;
+        padding: 0.7em 2em;
+    }
+    .intro{
+        padding-bottom: 2em;
+        p{ font-size: 2em; }
+        
+        img{ margin: auto;}
+    }
+/* Main Navigation */
+.main-navigation{
+    img{
+        width: 100px;
+    }
+    .menu-icon{
+        display: block;
+        width: 25px;
+    }
+    .menu-items{
+        display: none;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 1em;
+        a{
+            margin:1em 0;
+        }
+    }
+}
+    .recent-listings{
+        .container{
+            width: 90%;
+        }
+        .listings{
+            grid-template-columns: repeat(2,1fr);
+            .item{
+                padding-bottom: 1em;
+                .container{
+                    width: 85%;
+                }
+                h3{
+                    font-size: 1em;
+                }
+                p{
+                    // font-size: 11px;
+                    // margin-bottom: 0;
+                    display: none;
+                }
+                .btn{
+                // display: none;
+                font-size: 8px;
+                padding: 0.5em 1em;
+                }
+                
+            }
+        }
+        
+    }
+
+    .hero{
+        .col-4,.col-6{
+            padding: 2em 0;
+        }
+        img{
+            width: 60%;
+            margin: auto;
+        }
+    }
+
+    .form-wrapper{
+        img{
+            display: none;
+        }
+        .form-container{
+            margin-top: -100px;
+        }
+    }
+    
+    .main-footer{
+        img{width:150px;}
+        .col-3{width: 70%;}
+    }
+
+    /*Welcome Illustration*/
+    .welcome{
+        .col-4{
+            padding-bottom: 3em;
+        }
+        .welcome-illustration{
+            width: 60%;
+        }
+
+    }
+    
+    .list-view{
+        img{
+            width: 100%;
+        }
+    }
+}
+

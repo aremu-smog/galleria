@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('gallery','GalleryController');
+Route::resource('image','ImagesController');

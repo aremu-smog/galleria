@@ -1,1 +1,134 @@
+//Typography
+@import 'typography';
+@import 'custom';
 //
+
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Karla', sans-serif;
+    font-size: 14px;
+    font-display: swap;
+    background: $light-grey;
+}
+a{
+    text-decoration: none;
+}
+.main-navigation{
+    background: #940EF9;
+    padding: 0em 2em 4em;
+    position: fixed;
+    top: 75px;
+    right: 0px;
+    width: 150px;
+    font-size: 16px;
+    text-align: right;
+    line-height: 30px;
+    border-radius: 5px;
+    display: none;
+    a{
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+    
+}
+
+
+
+
+.recent-listings{
+    background: $light-grey;
+    padding: 4em 0;
+    h1{
+        font-size: 2.5em;
+        margin-bottom: 1em;
+    }
+    .listings{
+        // $auto-grid-min-size: 10rem;
+        // padding: 2em 0;
+        display: grid;
+        // grid-template-columns: repeat(auto-fill, minmax($auto-grid-min-size, 1fr));
+        gap: 1em ;
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-auto-flow: row;
+        // .col-3{
+        //     padding-right: 1.5%;
+        //     margin-bottom: 1.5%;
+        // }
+        .item{
+            background: white;
+            padding-bottom: 3em;
+            border-radius:5px;
+            h3{
+                font-size: 1.6em;
+            }
+            img{
+                border-radius: 5px 5px 0px 0px;
+                width: 100%;
+            }
+            p{
+                margin-bottom: 2em;
+            }
+            .btn{
+                font-size: 10px;
+                padding: 1em 2em;
+            }
+            form{
+                margin-block-end: 0;
+            }
+        }
+    }
+}
+
+.form-container{
+    height: 500px;
+    margin: auto;
+    margin-top: 50px;
+    background: white;
+    margin-bottom: 50px;
+    width: 850px;
+    .col-6{
+        padding: 3em;
+        p{
+            font-size: 2em;
+            margin-top: 1em;
+        }
+    }
+}
+
+.create_gallery{
+    background-image: url('/img/albums.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+.main-footer{
+    background: black;
+    color: white;
+    height: 200px;
+    background-image: url('/img/galleria logo outline.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.main-header{
+    height: 80px;
+    // padding-bottom: 15vh;
+    padding: 0 2em;
+    background: $purple;
+    h1{
+        margin-top: -0.4em;
+    }
+}
+.logo{
+    height: 30px;
+}
+
+
+
+
+
+// Mobile Styles
+@import 'mobile';
