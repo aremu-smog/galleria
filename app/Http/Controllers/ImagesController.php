@@ -74,6 +74,9 @@ class ImagesController extends Controller
     public function show($id)
     {
         //
+        $image = Image::find($id);
+
+        return view('images.show',['image'=>$image]);
     }
 
     /**
