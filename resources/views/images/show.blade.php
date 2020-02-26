@@ -9,15 +9,10 @@
                 <p class="page-title text-generis">Pictures of {{$gallery->title}}</p>
             </div>
             <div class="col-3 text-right">
-                <a href="/image/create/{{$gallery->id}}" class="btn btn-purple-outline">Upload Photo</a>
+                <a href="http://" class="btn btn-purple-outline">Upload Photo</a>
             </div>
         </div>
         
-        @foreach ($gallery->images as $image)
-            <a href="/image/{{$image->id}}">
-                <img src="/storage/img/albums/{{$gallery->id}}/{{$image->image}}" alt="{{$image->title}}">
-            </a>
-        @endforeach
         
     </div>
     

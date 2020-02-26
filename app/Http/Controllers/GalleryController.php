@@ -50,6 +50,7 @@ class GalleryController extends Controller
         $cover_image_extension = $request->file('cover')->getClientOriginalExtension();
         $cover_image = time().'.'.$cover_image_extension;
         $request->file('cover')->storeAs('/public/img/albums/',$cover_image);
+        
         $gallery = new Gallery;
         $gallery->title = $request->input('title');
         $gallery->cover = $cover_image;

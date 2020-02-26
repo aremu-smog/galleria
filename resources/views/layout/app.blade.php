@@ -10,7 +10,7 @@
     <body>
         <header class="main-header row row-spread-items row-center-y">
             <div><a href="/"><img src="/img/galleria logo.svg" alt="galleria" class="logo"></a></div>
-            <div>Menu Icon</div>
+            <div><a href="/gallery/create" class="btn btn-white-outline">+ Create Gallery</a></div>
         </header>
         <nav class="main-navigation text-right text-white">
             <p >

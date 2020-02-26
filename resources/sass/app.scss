@@ -38,59 +38,48 @@ a{
 
 
 
-.recent-listings{
-    background: $light-grey;
-    padding: 4em 0;
-    h1{
-        font-size: 2.5em;
-        margin-bottom: 1em;
-    }
-    .listings{
-        // $auto-grid-min-size: 10rem;
-        // padding: 2em 0;
+.galleries{
         display: grid;
-        // grid-template-columns: repeat(auto-fill, minmax($auto-grid-min-size, 1fr));
         gap: 1em ;
-        grid-template-columns: repeat(5,1fr);
+        grid-template-columns: repeat(4,1fr);
         grid-template-rows: repeat(1, 1fr);
         grid-auto-flow: row;
-        // .col-3{
-        //     padding-right: 1.5%;
-        //     margin-bottom: 1.5%;
-        // }
-        .item{
-            background: white;
-            padding-bottom: 3em;
-            border-radius:5px;
-            h3{
-                font-size: 1.6em;
-            }
-            img{
-                border-radius: 5px 5px 0px 0px;
-                width: 100%;
-            }
-            p{
-                margin-bottom: 2em;
-            }
-            .btn{
-                font-size: 10px;
-                padding: 1em 2em;
-            }
-            form{
-                margin-block-end: 0;
+        padding-bottom: 10em;
+    .gallery{
+        background: $purple;
+        border-radius: 10px;
+        position: relative;
+        height: 200px;
+        p{
+            position: absolute;
+            top: 30%;
+            left: 30%;
+            font-size: 1.5em;
+            line-height: 0.5;
+        }
+        img{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 10px;
+            transition: mix-blend-mode 1s;
+            &:hover{
+                mix-blend-mode: multiply;
             }
         }
     }
+       
 }
 
 .form-container{
     height: 500px;
     margin: auto;
-    margin-top: 50px;
+    // margin-top: 50px;
     background: white;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
     width: 850px;
-    .col-6{
+    .form-area{
         padding: 3em;
         p{
             font-size: 2em;
@@ -104,6 +93,18 @@ a{
     background-size: cover;
     background-position: center center;
 }
+.upload_photo{
+    background: $purple;
+    position: relative;
+    overflow: hidden;
+    padding: 0 !important;
+    img{
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        object-position: center;
+    }
+}
 
 .main-footer{
     background: black;
@@ -112,10 +113,14 @@ a{
     background-image: url('/img/galleria logo outline.svg');
     background-repeat: no-repeat;
     background-position: center;
+    margin-top: 50px;
+}
+.page-title{
+    font-size: 1.8em;
 }
 .main-header{
     height: 80px;
-    // padding-bottom: 15vh;
+    margin-bottom: 70px;
     padding: 0 2em;
     background: $purple;
     h1{
@@ -126,7 +131,13 @@ a{
     height: 30px;
 }
 
-
+.alert{
+    width: 100%;
+    border: 1px solid $purple;
+    background: white;
+    color: $purple;
+    padding: 1em;
+}
 
 
 

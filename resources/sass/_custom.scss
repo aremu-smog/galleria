@@ -64,7 +64,15 @@ $light-grey: #F2F2F2;
         opacity: 0.7;
     }
 }
-
+.btn-purple-outline{
+    background: none;
+    color: $purple;
+    border-color: $purple;
+    &:hover{
+        background: $purple;
+        color: white;
+    }
+}
 
 
 /* Text styles */
