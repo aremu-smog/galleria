@@ -295,6 +295,33 @@ a {
   mix-blend-mode: multiply;
 }
 
+.images {
+  line-height: 1.5em;
+  -webkit-column-count: 4;
+     -moz-column-count: 4;
+          column-count: 4;
+  -webkit-column-gap: 0.5em;
+     -moz-column-gap: 0.5em;
+          column-gap: 0.5em;
+}
+
+.images img {
+  width: 100%;
+  height: auto;
+}
+
+.image img {
+  width: 100%;
+}
+
+.image .details {
+  padding-left: 3em;
+}
+
+.image .details .btn {
+  display: inline-block;
+}
+
 .form-container {
   height: 500px;
   margin: auto;

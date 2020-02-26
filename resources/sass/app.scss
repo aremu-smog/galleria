@@ -72,6 +72,28 @@ a{
        
 }
 
+.images{
+    line-height: 1.5em;
+    column-count: 4;
+    column-gap: 0.5em;
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+.image{
+    img{
+        width: 100%;
+    }
+    .details{
+        padding-left: 3em;
+        .btn{
+            display: inline-block;
+        }
+    }
+}
+
 .form-container{
     height: 500px;
     margin: auto;

@@ -13,11 +13,13 @@
             </div>
         </div>
         
+        <div class="images">
         @foreach ($gallery->images as $image)
             <a href="/image/{{$image->id}}">
                 <img src="/storage/img/albums/{{$gallery->id}}/{{$image->image}}" alt="{{$image->title}}">
             </a>
         @endforeach
+        </div>
         
     </div>
     
