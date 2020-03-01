@@ -2,13 +2,13 @@
 
 @section('content')
 
-    <div class="row form-container">
-        <div class="col-7 upload_photo">
+    <div class="row form-container row-column">
+        <div class="col-7 upload_photo col-mobile-full">
            <img src="/storage/img/albums/{{$gallery->cover}}" alt="{{$gallery->title}}">
         </div>
-        <div class="col-5 form-area">
+        <div class="col-5 form-area col-mobile-full">
             {{-- <p>{{ $gallery->title }}</p> --}}
-            <p class="text-generis">Upload Photo</p>
+            <p class="text-generis text-small">Upload Photo</p>
 
                 @include('incl.messages')
                 

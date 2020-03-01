@@ -2,10 +2,10 @@
 
 @section('content')
 
-    <div class="row form-container">
-        <div class="col-7 create_gallery"></div>
-        <div class="col-5 form-area">
-            <p class="text-generis">Create Gallery</p>
+    <div class="row form-container row-column">
+        <div class="col-7 create_gallery col-mobile-full"></div>
+        <div class="col-5 form-area col-mobile-full">
+            <p class="text-generis text-small">Create Gallery</p>
 
                 @include('incl.messages')
 

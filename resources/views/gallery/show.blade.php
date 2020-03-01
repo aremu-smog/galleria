@@ -8,7 +8,7 @@
             <div class="col-7">
                 <p class="page-title text-generis">Pictures of {{$gallery->title}}</p>
             </div>
-            <div class="col-3 text-right">
+            <div class="col-5 text-right">
                 <a href="/image/create/{{$gallery->id}}" class="btn btn-purple-outline">Upload Photo</a>
             </div>
         </div>
