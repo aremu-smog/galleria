@@ -10,7 +10,7 @@
             <a href="/gallery/{{$gallery->id}}">
                 <div class="gallery ">
                     
-                    <img src="{{Storage::url('/img/albums/'.$gallery->cover)}}" alt="{{$gallery->title}}">
+                    <img src="{{Storage::url('img/albums/'.$gallery->cover)}}" alt="{{$gallery->title}}">
                     <p class="text-generis text-center text-white">{{strtolower($gallery->title)}}</p>
                 </div>
             </a>
