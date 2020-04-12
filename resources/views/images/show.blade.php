@@ -13,7 +13,7 @@
                 <p class="page-title text-generis text-small"> {{$image->title}}</p>
                 <p>Uploaded by <b>{{$image->by}}</b> <br/>
                 on <b>{{$image->created_at->format('M d, Y')}}</b></p>
-                <a href="/storage/img/albums/{{$image->gallery_id}}/{{$image->image}}" download="{{time()}}" class="btn btn-purple">Download Photo</a>
+                <a href="/img/albums/{{$image->gallery_id}}/{{$image->image}}" download="{{time()}}" class="btn btn-purple">Download Photo</a>
             </div>
         </div>
         

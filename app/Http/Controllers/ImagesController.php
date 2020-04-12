@@ -51,7 +51,7 @@ class ImagesController extends Controller
         $image_extenstion = $request->file('image')->getClientOriginalExtension();
         $image = time().'.'.$image_extenstion;
 
-        $request->file('image')->storeAs('/img/albums/'.$gallery_id,$image);
+        $request->file('image')->storeAs('public/img/albums/'.$gallery_id,$image);
 
         $new_image = new Image;
         $new_image->title = $request->input('title');
