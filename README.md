@@ -1,2 +1,2 @@
 # galleria
-Is an open source image distribution platform that allows users access and upload high-resolution images and it's project 4 of my laravel in 10projects. [Preview here](http://galleria.herokuapp.com)
+Is an open source image distribution platform that allows users access and upload high-resolution images and it's project 4 of my laravel in 10projects. [Preview here](http://smog-galleria.herokuapp.com)
