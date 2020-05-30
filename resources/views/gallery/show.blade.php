@@ -16,7 +16,7 @@
         <div class="images">
         @foreach ($gallery->images as $image)
             <a href="/image/{{$image->id}}">
-                <img src="/img/albums/{{$gallery->id}}/{{$image->image}}" alt="{{$image->title}}">
+                <img src="{{$image->image}}" alt="{{$image->title}}">
             </a>
         @endforeach
         </div>

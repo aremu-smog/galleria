@@ -6,6 +6,8 @@ use App\Gallery;
 use App\Image;
 use Illuminate\Http\Request;
 
+use Cloudder;
+
 class ImagesController extends Controller
 {
     /**
@@ -46,17 +48,14 @@ class ImagesController extends Controller
         ]);
         
         $gallery_id = $request->input('gallery_id');
-        $image_with_extension = $request->file('image')->getClientOriginalName();
-        $image_name_without_extension = pathinfo($image_with_extension, PATHINFO_FILENAME);
-        $image_extenstion = $request->file('image')->getClientOriginalExtension();
-        $image = time().'.'.$image_extenstion;
+        Cloudder::upload($request->file('image'),null);
 
-        $request->file('image')->storeAs('public/img/albums/'.$gallery_id,$image);
+        $image = Cloudder::getResult();
 
         $new_image = new Image;
         $new_image->title = $request->input('title');
         $new_image->gallery_id = $gallery_id;
-        $new_image->image = $image;
+        $new_image->image = $image['url'];
         $new_image->description = $request->input('description');
         $new_image->by = $request->input('by');
 
