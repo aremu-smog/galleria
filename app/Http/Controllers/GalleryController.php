@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Gallery;
 use Illuminate\Http\Request;
+use Cloudder;
 
 class GalleryController extends Controller
 {
@@ -45,15 +46,21 @@ class GalleryController extends Controller
             'cover'=>'image|mimes:jpg,jpeg,png,svg|max:1028'
         ]);
         
-        $cover_image_original = $request->file('cover')->getClientOriginalName();
-        $cover_image_name = pathinfo($cover_image_original, PATHINFO_FILENAME);
-        $cover_image_extension = $request->file('cover')->getClientOriginalExtension();
-        $cover_image = time().'.'.$cover_image_extension;
-        $request->file('cover')->storeAs('public/img/albums/',$cover_image);
+        // $cover_image_original = $request->file('cover')->getClientOriginalName();
+        // $cover_image_name = pathinfo($cover_image_original, PATHINFO_FILENAME);
+        // $cover_image_extension = $request->file('cover')->getClientOriginalExtension();
+
+        // $current_time = time();
+        // $cover_image = $current_time.'.'.$cover_image_extension;
+        // $request->file('cover')->storeAs('public/img/albums/',$cover_image);
+
+        Cloudder::upload($request->file('cover'),null);
+
+        $cover_image = Cloudder::getResult();
 
         $gallery = new Gallery;
         $gallery->title = $request->input('title');
-        $gallery->cover = $cover_image;
+        $gallery->cover = $cover_image["url"];
         $gallery->by = $request->input('by');
 
         $gallery->save();
